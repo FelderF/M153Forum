@@ -1,0 +1,70 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>86082dab-0e95-444a-9d21-f250972b272f</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>mainForum.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>M153Diskussionsforum</Name>
+    <RootNamespace>M153Diskussionsforum</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Category.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="config.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="connect.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ForumDAO.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="initializer.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Login.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="connectExt.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Thread.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Topic.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Validator.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="mainForum.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="database.ini" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
