@@ -1,10 +1,7 @@
-from re import I
 from Login import login
 from Login import registration
 from Login import adminLogin
-from ForumDAO import connect
-from initalizeDB import initializeDB
-import psycopg2
+from connectExt import connect
 
 #Start
 #while not want to quit, do the following loop
@@ -12,6 +9,9 @@ import psycopg2
 #if logged in, select eighter category management or user management
 #port 5432
 
+if __name__ == '__main__':
+    connect()
+connect()
 print("welcome to the forum")
 loggedIn = bool(False)
 ToDo ="n"
@@ -38,7 +38,7 @@ while ToDo != "e":
             print("Something went wrong, sorry!")
     elif ToDo =="i":
         #call database initializer function without return value
-        initializeDB()
+        pass
     elif ToDo =="a":
         isLoggedIn = adminLogin()
         if isLoggedIn:
@@ -46,8 +46,7 @@ while ToDo != "e":
         #call admin function, without return value
         pass
     elif ToDo == "e":
-        #skipp the while loop and exit afterwards        
-        pass
+        #skipp the while loop and exit afterwards
     else:
         print("Please enter a valid input")
 print("goodbye")

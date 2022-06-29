@@ -4,10 +4,10 @@ modulename = 'psycopg2'
 if 'psycopg2' not in modulename:
     print('Module not loaded')
 
-def connect(self):
+def connect():
     try:
         conn = psycopg2.connect(host="localhost",
-        database="forum",
+        database="customers",
         user="postgres",
         password="admin")
     except psycopg2.OperationalError as e:
@@ -21,8 +21,8 @@ def connect(self):
 '''
     conn = psycopg2.connect(
         host="localhost",
-        database="forum",
+        database="customers",
         user="postgres",
         password="admin")
 '''
-#connect()
+connect()
