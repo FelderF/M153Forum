@@ -1,6 +1,6 @@
 import psycopg2
 from config import config
-
+#not used, template for database connection
 def connect():
     """ Connect to the PostgreSQL database server """
     conn = None

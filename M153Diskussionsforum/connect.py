@@ -1,13 +1,13 @@
 import psycopg2, sys
-
+#not used, templaste for database connection
 modulename = 'psycopg2'
 if 'psycopg2' not in modulename:
     print('Module not loaded')
 
-def connect():
+def connect(self):
     try:
         conn = psycopg2.connect(host="localhost",
-        database="customers",
+        database="forum",
         user="postgres",
         password="admin")
     except psycopg2.OperationalError as e:
@@ -21,8 +21,8 @@ def connect():
 '''
     conn = psycopg2.connect(
         host="localhost",
-        database="customers",
+        database="forum",
         user="postgres",
         password="admin")
 '''
-connect()
+#connect()
